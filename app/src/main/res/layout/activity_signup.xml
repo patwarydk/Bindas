@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradients_background"
+    android:orientation="vertical"
+    tools:context=".SignupActivity">
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/message_background"
+        android:textColor="#1fc3b3"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="message"
+        android:visibility="invisible"
+        />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:drawableLeft="@drawable/ic_action_user"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/corner_radius"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:textColorHint="#1fc3b3"
+        android:padding="10dp"
+        android:hint="  Email id"
+        android:inputType="textEmailAddress"
+        android:textSize="18dp"
+        android:elegantTextHeight="true"/>
+
+    <EditText
+        android:id="@+id/editTextPass"
+        android:drawableLeft="@drawable/ic_action_lock"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/corner_radius"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:textColorHint="#1fc3b3"
+        android:padding="10dp"
+        android:hint=" Password"
+        android:inputType="textPassword"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_radius"
+        android:layout_marginTop="10dp"
+        android:text="Sign up"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:onClick="singnUpButton"
+        />
+</LinearLayout>

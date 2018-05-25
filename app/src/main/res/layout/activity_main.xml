@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradients_background"
+    android:gravity="center_vertical|center"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:animateLayoutChanges="true"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="236dp"
+        android:layout_height="170dp"
+        android:src="@mipmap/ic_launcher_logo_border" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/message_background"
+                android:textColor="#1fc3b3"
+                android:layout_marginBottom="10dp"
+                tools:text="message"
+                android:visibility="invisible"
+                />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_action_user"
+                android:background="@drawable/corner_radius"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:textColorHint="#1fc3b3"
+                android:padding="10dp"
+                android:hint="  Email id"
+                android:inputType="textEmailAddress"
+                android:textSize="18dp"
+                android:elegantTextHeight="true"/>
+
+            <EditText
+                android:id="@+id/editTextPass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_action_lock"
+                android:background="@drawable/corner_radius"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:textColorHint="#1fc3b3"
+                android:padding="10dp"
+                android:hint=" Password"
+                android:inputType="textPassword"
+                android:textSize="18sp"
+                />
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_radius"
+                android:layout_marginTop="10dp"
+                android:text="Sign in"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:onClick="singnInButton"
+                />
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/signGoogle"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:background="@color/transperent"
+                android:layout_gravity="center"
+                />
+            <Button
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="20dp"
+                 android:gravity="center"
+                 android:textSize="16sp"
+                 android:textColor="#fff"
+                android:textAllCaps="false"
+                 android:background="@color/transperent"
+                 android:text="Forgot password ?"
+                 android:onClick="forgotPass"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Bindas id! Sign up"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:background="@color/transperent"
+                android:textSize="16sp"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:onClick="sigunupUser"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

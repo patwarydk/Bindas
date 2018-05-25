@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "144376650617",
+    "firebase_url": "https://bindas-197e3.firebaseio.com",
+    "project_id": "bindas-197e3",
+    "storage_bucket": "bindas-197e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144376650617:android:6faa78139b2c2588",
+        "android_client_info": {
+          "package_name": "com.example.mehrab_patwary.bindas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144376650617-3p4gapk07e0uoaorl704qdvn05fqcm8t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEptGRy8bZ7tMxXhzuILjFsC4rAAII-oM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144376650617-3p4gapk07e0uoaorl704qdvn05fqcm8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

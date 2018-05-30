@@ -130,7 +130,7 @@ public class DrawerActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.fragment_container,eventsFragment).commit();
         }else if (id == R.id.nav_eventsAdd) {
             setTitle("Accounts");
-            EventFormFragment eventFormFragment = new EventFormFragment();
+            EventForm eventFormFragment = new EventForm();
             android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.fragment_container,eventFormFragment).commit();
 

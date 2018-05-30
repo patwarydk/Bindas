@@ -1,123 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradients_background"
-    tools:context=".EventFormFragment">
+    tools:context=".EventForm">
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/nameForm"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/corner_radius"
+        android:elegantTextHeight="true"
+        android:ems="10"
+        android:hint="  Event Name"
+        android:padding="10dp"
+        android:textColorHint="#1fc3b3"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/locationForm"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/corner_radius"
+        android:elegantTextHeight="true"
+        android:ems="10"
+        android:hint="  Event Location"
+        android:padding="10dp"
+        android:textColorHint="#1fc3b3"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/descriptionForm"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/corner_radius"
+        android:elegantTextHeight="true"
+        android:ems="10"
+        android:hint="  Description"
+        android:padding="10dp"
+        android:textColorHint="#1fc3b3"
+        android:textSize="16sp" />
+
+
+    <EditText
+        android:id="@+id/startDate"
+        android:layout_width="153dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/nameForm"
+        android:layout_marginTop="156dp"
+        android:background="@drawable/corner_radius"
+        android:elegantTextHeight="true"
+        android:ems="10"
+        android:hint="  Event Strart Date"
+        android:padding="10dp"
+        android:textColorHint="#1fc3b3"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/endDate"
+        android:layout_width="153dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/nameForm"
+        android:layout_alignTop="@+id/startDate"
+        android:background="@drawable/corner_radius"
+        android:elegantTextHeight="true"
+        android:ems="10"
+        android:hint="  Event End Date"
+        android:padding="10dp"
+        android:textColorHint="#1fc3b3"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/imgPreview"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="182dp" />
+
+    <Button
+        android:id="@+id/btnFileChoose"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/nameForm"
+        android:layout_alignTop="@+id/btnImageUpload"
+        android:background="@drawable/button_radius"
+        android:gravity="center"
+        android:text="Select Image"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnImageUpload"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/nameForm"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="96dp"
+        android:background="@drawable/button_radius"
+        android:gravity="center"
+        android:text="Image Upload"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/showTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="145dp"
+        android:layout_marginEnd="51dp"
+        android:text="Show upload" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/button_radius"
+        android:gravity="center"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <ProgressBar
+        android:id="@+id/progressUpload"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
-        <EditText
-            android:id="@+id/nameForm"
-            android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:background="@drawable/corner_radius"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:textColorHint="#1fc3b3"
-            android:padding="10dp"
-            android:hint="  Event Name"
-            android:textSize="18dp"
-            android:elegantTextHeight="true"/>
-        <EditText
-            android:id="@+id/locationForm"
-            android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:background="@drawable/corner_radius"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:textColorHint="#1fc3b3"
-            android:padding="10dp"
-            android:hint="  Event Location"
-            android:textSize="18dp"
-            android:elegantTextHeight="true"/>
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
-        <EditText
-            android:id="@+id/descriptionForm"
-            android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:background="@drawable/corner_radius"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:textColorHint="#1fc3b3"
-            android:padding="10dp"
-            android:hint="  Description"
-            android:textSize="18dp"
-            android:elegantTextHeight="true"/>
-            />
-
-        <EditText
-            android:id="@+id/startDate"
-            android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:background="@drawable/corner_radius"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:textColorHint="#1fc3b3"
-            android:padding="10dp"
-            android:hint="  Event Strart Date"
-            android:textSize="18dp"
-            android:elegantTextHeight="true"/>
-
-        <EditText
-            android:id="@+id/endDate"
-            android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:background="@drawable/corner_radius"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:textColorHint="#1fc3b3"
-            android:padding="10dp"
-            android:hint="  Event End Date"
-            android:textSize="18dp"
-            android:elegantTextHeight="true"/>
-
-        <Button
-            android:id="@+id/btnImgSc"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:background="@drawable/button_radius"
-            android:layout_marginTop="10dp"
-            android:text="Select Image"
-            android:textColor="#fff"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textSize="16sp"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btnImgUp"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:background="@drawable/button_radius"
-            android:layout_marginTop="10dp"
-            android:text="Image Upload"
-            android:textColor="#fff"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textSize="16sp"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btnSave"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:background="@drawable/button_radius"
-            android:layout_marginTop="10dp"
-            android:text="Save"
-            android:textColor="#fff"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textSize="16sp"
-            android:textAllCaps="false"/>
-    </LinearLayout>
-
-</FrameLayout>
+</RelativeLayout>

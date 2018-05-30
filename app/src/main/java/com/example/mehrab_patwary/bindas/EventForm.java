@@ -2,11 +2,8 @@ package com.example.mehrab_patwary.bindas;
 
 
 import android.app.DatePickerDialog;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,14 +17,13 @@ import java.util.Calendar;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EventFormFragment extends Fragment {
-    private EditText sDate, eDate, allDate;
+public class EventForm extends Fragment {
+    private EditText sDate, eDate;
     private Calendar calendar;
     private int year, month, day;
     private String date, createDate;
 
-
-    public EventFormFragment() {
+    public EventForm() {
         // Required empty public constructor
     }
 
@@ -43,7 +39,7 @@ public class EventFormFragment extends Fragment {
         year = calendar.get(Calendar.YEAR);
         month= calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
-// Date picker event listner start **********************************************
+        // Date picker event listner start **********************************************
 
         sDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +71,7 @@ public class EventFormFragment extends Fragment {
                                 date = sdf.format(calendar.getTime());
                                 Calendar c = Calendar.getInstance();
                                 createDate = sdf.format(c.getTime());
-                               eDate.setText(date);
+                                eDate.setText(date);
                             }
                         }, year, month, day);
                 datePickerDialog.show();

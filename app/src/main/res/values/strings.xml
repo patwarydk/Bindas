@@ -10,4 +10,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="event_location">Event Location</string>
+    <string name="event_description">Event Description</string>
+    <string name="event_strart_date">Event Strart Date</string>
+    <string name="event_end_date">Event End Date</string>
+    <string name="choose_file">Choose file</string>
+    <string name="show_uploads">Show Uploads</string>
+    <string name="upload">Upload</string>
+    <string name="save">Save</string>
 </resources>

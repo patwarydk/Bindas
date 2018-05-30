@@ -1,5 +1,6 @@
 package com.example.mehrab_patwary.bindas;
 
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -56,23 +57,31 @@ public class DrawerActivity extends AppCompatActivity
 
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+        //**************** Drawer default page Start *************************
+        if (savedInstanceState==null){
+            setTitle("Events");
+            EventsFragment eventsFragment = new EventsFragment();
+            android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.fragment_container,eventsFragment).commit();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        }
+        // ********************** Drawer default page end *****************
     }
 
     @Override
@@ -113,11 +122,29 @@ public class DrawerActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_events) {
+            // Handle the events action
+            setTitle("Events");
+            EventsFragment eventsFragment = new EventsFragment();
+            android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.fragment_container,eventsFragment).commit();
+        }else if (id == R.id.nav_eventsAdd) {
+            setTitle("Accounts");
+            EventFormFragment eventFormFragment = new EventFormFragment();
+            android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.fragment_container,eventFormFragment).commit();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_accounts) {
+            setTitle("Accounts");
+            AccountsFragment accountsFragment = new AccountsFragment();
+            android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.fragment_container,accountsFragment).commit();
+
+        }else if (id == R.id.nav_camera) {
+
+        }else if (id == R.id.nav_gallery) {
+
+        }else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
 

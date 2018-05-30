@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradients_background"
+    tools:context=".EventFormFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/nameForm"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:background="@drawable/corner_radius"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:textColorHint="#1fc3b3"
+            android:padding="10dp"
+            android:hint="  Event Name"
+            android:textSize="18dp"
+            android:elegantTextHeight="true"/>
+        <EditText
+            android:id="@+id/locationForm"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:background="@drawable/corner_radius"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:textColorHint="#1fc3b3"
+            android:padding="10dp"
+            android:hint="  Event Location"
+            android:textSize="18dp"
+            android:elegantTextHeight="true"/>
+
+        <EditText
+            android:id="@+id/descriptionForm"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:background="@drawable/corner_radius"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:textColorHint="#1fc3b3"
+            android:padding="10dp"
+            android:hint="  Description"
+            android:textSize="18dp"
+            android:elegantTextHeight="true"/>
+            />
+        <EditText
+            android:id="@+id/createDate"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:background="@drawable/corner_radius"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:textColorHint="#1fc3b3"
+            android:padding="10dp"
+            android:hint="  Event Create Date"
+            android:textSize="18dp"
+            android:elegantTextHeight="true"/>
+        />
+        <EditText
+            android:id="@+id/startDate"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:background="@drawable/corner_radius"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:textColorHint="#1fc3b3"
+            android:padding="10dp"
+            android:hint="  Event Strart Date"
+            android:textSize="18dp"
+            android:elegantTextHeight="true"/>
+        />
+        <EditText
+            android:id="@+id/endDate"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:background="@drawable/corner_radius"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:textColorHint="#1fc3b3"
+            android:padding="10dp"
+            android:hint="  Event End Date"
+            android:textSize="18dp"
+            android:elegantTextHeight="true"/>
+        />
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_radius"
+            android:layout_marginTop="10dp"
+            android:text="Select Image"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            />
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_radius"
+            android:layout_marginTop="10dp"
+            android:text="Image Upload"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            />
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_radius"
+            android:layout_marginTop="10dp"
+            android:text="Save"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            />
+    </LinearLayout>
+
+</FrameLayout>

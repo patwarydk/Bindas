@@ -21,7 +21,7 @@ import java.util.Calendar;
  * A simple {@link Fragment} subclass.
  */
 public class EventFormFragment extends Fragment {
-    private EditText cDate, sDate, eDate, allDate;
+    private EditText sDate, eDate, allDate;
     private Calendar calendar;
     private int year, month, day;
     private String date, createDate;
@@ -37,7 +37,6 @@ public class EventFormFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_event_form, container, false);
-        cDate = v.findViewById(R.id.createDate);
         sDate = v.findViewById(R.id.startDate);
         eDate = v.findViewById(R.id.endDate);
         calendar = Calendar.getInstance();
@@ -45,24 +44,6 @@ public class EventFormFragment extends Fragment {
         month= calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
 // Date picker event listner start **********************************************
-        cDate.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(),
-                            new DatePickerDialog.OnDateSetListener() {
-                                @Override
-                                public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-                                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-                                    calendar.set(i,i1,i2);
-                                    date = sdf.format(calendar.getTime());
-                                    Calendar c = Calendar.getInstance();
-                                    createDate = sdf.format(c.getTime());
-                                    cDate.setText(date);
-                                }
-                            }, year, month, day);
-                    datePickerDialog.show();
-                }
-            });
 
         sDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +57,7 @@ public class EventFormFragment extends Fragment {
                                 date = sdf.format(calendar.getTime());
                                 Calendar c = Calendar.getInstance();
                                 createDate = sdf.format(c.getTime());
-                                cDate.setText(date);
+                                sDate.setText(date);
                             }
                         }, year, month, day);
                 datePickerDialog.show();
@@ -94,7 +75,7 @@ public class EventFormFragment extends Fragment {
                                 date = sdf.format(calendar.getTime());
                                 Calendar c = Calendar.getInstance();
                                 createDate = sdf.format(c.getTime());
-                                cDate.setText(date);
+                               eDate.setText(date);
                             }
                         }, year, month, day);
                 datePickerDialog.show();

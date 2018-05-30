@@ -51,20 +51,7 @@
             android:textSize="18dp"
             android:elegantTextHeight="true"/>
             />
-        <EditText
-            android:id="@+id/createDate"
-            android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:background="@drawable/corner_radius"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:textColorHint="#1fc3b3"
-            android:padding="10dp"
-            android:hint="  Event Create Date"
-            android:textSize="18dp"
-            android:elegantTextHeight="true"/>
-        />
+
         <EditText
             android:id="@+id/startDate"
             android:layout_width="350dp"
@@ -78,7 +65,7 @@
             android:hint="  Event Strart Date"
             android:textSize="18dp"
             android:elegantTextHeight="true"/>
-        />
+
         <EditText
             android:id="@+id/endDate"
             android:layout_width="350dp"
@@ -92,8 +79,9 @@
             android:hint="  Event End Date"
             android:textSize="18dp"
             android:elegantTextHeight="true"/>
-        />
+
         <Button
+            android:id="@+id/btnImgSc"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:background="@drawable/button_radius"
@@ -103,9 +91,10 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:textSize="16sp"
-            android:textAllCaps="false"
-            />
+            android:textAllCaps="false"/>
+
         <Button
+            android:id="@+id/btnImgUp"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:background="@drawable/button_radius"
@@ -115,9 +104,10 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:textSize="16sp"
-            android:textAllCaps="false"
-            />
+            android:textAllCaps="false"/>
+
         <Button
+            android:id="@+id/btnSave"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:background="@drawable/button_radius"
@@ -127,8 +117,7 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:textSize="16sp"
-            android:textAllCaps="false"
-            />
+            android:textAllCaps="false"/>
     </LinearLayout>
 
 </FrameLayout>

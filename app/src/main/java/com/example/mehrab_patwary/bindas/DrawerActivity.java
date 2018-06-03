@@ -15,7 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.Toast;
+
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -60,8 +60,7 @@ public class DrawerActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
             }
         });
 
@@ -114,9 +113,9 @@ public class DrawerActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            startActivity(new Intent(DrawerActivity.this,ImageActivity.class));
         } else if (id == R.id.nav_gallery) {
-
+            
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
@@ -126,11 +125,18 @@ public class DrawerActivity extends AppCompatActivity
         } else if (id == R.id.nav_send) {
 
         }
+        switch (item.getItemId()){
+            case R.id.weather_info:
+                startActivity(new Intent(DrawerActivity.this,WeatherActivity.class));
+            break;
+        }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
     // Logout  Start **********************************
     public void logout(MenuItem item) {
         mAuth.signOut();

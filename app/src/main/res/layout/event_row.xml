@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    app:cardBackgroundColor="#fff"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:foreground="?selectableItemBackground">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Event Name :"
+                android:background="@color/midColor"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/viewEventsName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tooltipText="চলো ঘুরে আসি ককস বাজার"
+                android:padding="5dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Event Location :"
+                android:background="@color/midColor"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/viewEventsLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tooltipText="Cox's Bazar, Chittagong"
+                android:padding="5dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Event Name :"
+                android:background="@color/midColor"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/viewEventsDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tooltipText="Cox's bazar is the largest sea beach in the world."
+                android:padding="5dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/gradients_background"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/village"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Start Date :"
+                android:background="@color/midColor"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="End Date :"
+                android:background="@color/midColor"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:layout_marginLeft="100dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/viewEventsStartDate"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:tooltipText="25 January 2018"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/viewEventsEndDate"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:tooltipText="31 January 2018" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Budget:"
+                android:background="@color/midColor"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+
+            <ProgressBar
+                android:id="@+id/viewEventProgreessBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:progress="50"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

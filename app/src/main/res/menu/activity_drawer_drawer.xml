@@ -20,7 +20,6 @@
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
             android:title="Tools" />
-
     </group>
 
     <item android:title="Communicate">
@@ -35,13 +34,6 @@
                 android:title="Send" />
         </menu>
     </item>
-
-    <group>
-    <item
-        android:id="@+id/weather_info"
-        android:title="Weather Info" />
-    </group>
-
     <group>
         <item
             android:icon="@mipmap/ic_launcher_logout"

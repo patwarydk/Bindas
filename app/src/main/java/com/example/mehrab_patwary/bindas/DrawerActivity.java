@@ -1,12 +1,8 @@
 package com.example.mehrab_patwary.bindas;
 
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,7 +12,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -74,9 +69,9 @@ public class DrawerActivity extends AppCompatActivity
         //**************** Drawer default page Start *************************
         if (savedInstanceState==null){
             setTitle("Events");
-            EventsFragment eventsFragment = new EventsFragment();
+            EventsView eventsView = new EventsView();
             android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.fragment_container,eventsFragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.fragment_container, eventsView).commit();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -125,20 +120,20 @@ public class DrawerActivity extends AppCompatActivity
         if (id == R.id.nav_events) {
             // Handle the events action
             setTitle("Events");
-            EventsFragment eventsFragment = new EventsFragment();
+            EventsView eventsView = new EventsView();
             android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.fragment_container,eventsFragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.fragment_container, eventsView).commit();
         }else if (id == R.id.nav_eventsAdd) {
             setTitle("Accounts");
-            EventForm eventFormFragment = new EventForm();
+            EventUpload eventFormFragment = new EventUpload();
             android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.fragment_container,eventFormFragment).commit();
 
         } else if (id == R.id.nav_accounts) {
             setTitle("Accounts");
-            AccountsFragment accountsFragment = new AccountsFragment();
+            AccountView accountView = new AccountView();
             android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.fragment_container,accountsFragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.fragment_container, accountView).commit();
 
         }else if (id == R.id.nav_camera) {
 

@@ -13,10 +13,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AccountsFragment extends Fragment {
+public class AccountView extends Fragment {
 
 
-    public AccountsFragment() {
+    public AccountView() {
         // Required empty public constructor
     }
 
@@ -25,7 +25,7 @@ public class AccountsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_accounts, container, false);
+        View v = inflater.inflate(R.layout.account_view, container, false);
         FloatingActionButton fab = v.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
